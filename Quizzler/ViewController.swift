@@ -58,6 +58,9 @@ class ViewController: UIViewController {
     func checkAnswer(_ value: Bool) {
       if value == questionBank.questions[questionIndex].answer {
         score += 1
+        ProgressHUD.showSuccess("Correct!")
+      } else {
+        ProgressHUD.showError("Wrong!")
       }
       nextQuestion()
     }
